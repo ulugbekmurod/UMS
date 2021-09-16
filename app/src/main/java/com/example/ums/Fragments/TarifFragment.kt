@@ -23,6 +23,20 @@ class TarifFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+        addData()
+
+
+    }
+    private fun addData() {
+        usmitem.add(Model("Mobi 20","*111*120#","20 000/1 000 so'm oylik/kunlik abanent to'lovi500/17"))
+        usmitem.add(Model("Mobi 30","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
+        usmitem.add(Model("Mobi 40","*111*12#","40 000/2 000 so'mlik oylik/kunlik abanent to'lovi 1"))
+        usmitem.add(Model("Mobi 50","*111*122#","50 000 so'm abanent to'lovi oyiga UNLIM tarmoq"))
+        usmitem.add(Model("Mobi 60","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
+        usmitem.add(Model("Mobi 70","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
+        usmitem.add(Model("Mobi 80","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
+
     }
 
 
@@ -34,7 +48,7 @@ class TarifFragment : Fragment() {
 
         val view= inflater.inflate(R.layout.fragment_tarif, container, false)
         val binding=FragmentTarifBinding.bind(view)
-        addData()
+
         val myAdapter=MyAdapter(usmitem, object : ClickListner {
             override fun onClickItem(item: Model) {
 
@@ -66,15 +80,6 @@ class TarifFragment : Fragment() {
         return view
     }
 
-    private fun addData() {
-        usmitem.add(Model("Mobi 20","*111*120#","20 000/1 000 so'm oylik/kunlik abanent to'lovi500/17"))
-        usmitem.add(Model("Mobi 30","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
-        usmitem.add(Model("Mobi 40","*111*12#","40 000/2 000 so'mlik oylik/kunlik abanent to'lovi 1"))
-        usmitem.add(Model("Mobi 50","*111*122#","50 000 so'm abanent to'lovi oyiga UNLIM tarmoq"))
-        usmitem.add(Model("Mobi 60","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
-        usmitem.add(Model("Mobi 70","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
-        usmitem.add(Model("Mobi 80","*111*128#","30 000 so'm abanent to'lovi 10 000 so'm O'zbekiston bo'yich"))
 
-    }
 
 }
